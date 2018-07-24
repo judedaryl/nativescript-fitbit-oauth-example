@@ -1,0 +1,12 @@
+<GridLayout rows="*, auto, auto, auto, auto" columns="*">
+<WebView row="0" col="0" #loginWebView [src]="src" [visibility]="isItemVisible ? 'visible' : 'collapsed'"></WebView>
+<StackLayout row="0" col="0" orientation="vertical" [visibility]="userInfoVisible ? 'visible' : 'collapsed'">
+    <Label text="NAME: {{user.displayName}}"></Label>
+    <Label text="DATE OF BIRTH: {{user.dateOfBirth}}"></Label>
+    <Label text="AVERAGE DAILY STEPS: {{user.averageDailySteps}}"></Label>
+</StackLayout>
+<Label row="1" col="0" text="CODE: {{code}}"></Label>
+<Label row="2" col="0" text="ACCESS_TOKEN: {{access_token}}"></Label>
+<Label row="3" col="0" text="REFRESH_TOKEN: {{refresh_token}}"></Label>
+<Label row="4" col="0" text="EXPIRY: {{expires_in}}"></Label>
+</GridLayout>
